@@ -22,6 +22,8 @@ typedef struct {
 
 Map MapInit();
 
+int MapRegen(Map*);
+
 int MapDraw(Map*);
 
 int MapCellIsFree(Map*, int x, int y);

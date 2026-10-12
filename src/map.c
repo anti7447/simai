@@ -12,6 +12,16 @@ Map MapInit() {
     return map;
 }
 
+int MapRegen(Map* map) {
+    // Map map;
+    for (int j = 0; j < MAP_HEIGHT; j++) {
+        for (int i = 0; i < MAP_WIDTH; i++) {
+            map->Grid[j][i] = (Cell) { Tile_Free, NULL };
+        }
+    }
+    return 0;
+}
+
 int MapDraw(Map* m) {
     // Рисуем фоновую сетку
     for (int x = 0; x < MAP_WIDTH*CELL_SIZE+1; x += CELL_SIZE) {
